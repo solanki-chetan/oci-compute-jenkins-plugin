@@ -39,7 +39,7 @@ public class BaremetalCloudTemplateMonitor extends AsyncPeriodicWork{
                     if(template.isTemplateSleep()) {
                         long retryTimeOutMins = TimeUnit.MINUTES.toMillis(template.getRetryTimeoutMins());
                         LOGGER.log(Level.INFO,"Monitoring sleeping template " + template.getDisplayName()
-                                + " provided retryTime "+ template.getRetryTimeoutMins()+" minutes.");
+                        + " provided retryTime "+ template.getRetryTimeoutMins()+" minutes.");
                         long differenceTime = System.currentTimeMillis()-template.getSleepStartTime();
                         if (differenceTime > retryTimeOutMins){
                             template.setTemplateSleep(false);
@@ -52,7 +52,7 @@ public class BaremetalCloudTemplateMonitor extends AsyncPeriodicWork{
                         } else {
                             if(template.getDisableCause()==null){
                                 LOGGER.log(Level.INFO,"Not yet available, wait for atleast {0} minutes.",
-                                        (TimeUnit.MILLISECONDS.toMinutes(retryTimeOutMins-differenceTime)+1));
+                                    (TimeUnit.MILLISECONDS.toMinutes(retryTimeOutMins-differenceTime)+1));
                             }
                         }
                     }
@@ -118,7 +118,7 @@ public class BaremetalCloudTemplateMonitor extends AsyncPeriodicWork{
                 oldTemplate.labelString,
                 oldTemplate.idleTerminationMinutes,
                 oldTemplate.templateId,
-                oldTemplate.jenkinsAgentUser,
+		oldTemplate.jenkinsAgentUser,
                 oldTemplate.customJavaPath,
                 oldTemplate.customJVMOpts,
                 oldTemplate.initScript,

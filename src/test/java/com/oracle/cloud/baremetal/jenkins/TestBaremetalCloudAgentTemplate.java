@@ -187,7 +187,7 @@ public class TestBaremetalCloudAgentTemplate extends BaremetalCloudAgentTemplate
         public Builder jenkinsAgentUser(String jenkinsAgentUser) {
             this.jenkinsAgentUser = jenkinsAgentUser;
             return this;
-        }
+	}
 
         public Builder customJavaPath(String customJavaPath) {
             this.customJavaPath = customJavaPath;
@@ -274,7 +274,7 @@ public class TestBaremetalCloudAgentTemplate extends BaremetalCloudAgentTemplate
                 builder.labelString,
                 builder.idleTerminationMinutes,
                 builder.templateId,
-                builder.jenkinsAgentUser,
+	        builder.jenkinsAgentUser,
                 builder.customJavaPath,
                 builder.customJVMOpts,
                 builder.initScript,
