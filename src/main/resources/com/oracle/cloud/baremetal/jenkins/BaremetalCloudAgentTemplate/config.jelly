@@ -56,6 +56,10 @@
       <f:select />
     </f:entry>
 
+    <f:entry title="${%bootVolumeVPUs}" field="bootVolumeVPUs">
+      <f:select />
+    </f:entry>
+
     <f:entry title="${%vcnCompartmentId}" field="vcnCompartmentId">
       <f:select />
     </f:entry>
@@ -77,11 +81,11 @@
     </f:entry>
 
     <f:entry title="${%assignPublicIP}" field="assignPublicIP">
-      <f:checkbox default='true'/>
+      <f:checkbox default='false'/>
     </f:entry>
 
     <f:entry title="${%usePublicIP}" field="usePublicIP">
-      <f:checkbox default='true'/>
+      <f:checkbox default='false'/>
     </f:entry>
 
     <f:entry title="${%sshCredentialsId}" field="sshCredentialsId">
@@ -110,8 +114,8 @@
       </f:entry>
 
       <f:entry title="${%numExecutors}" field="numExecutors">
-        <f:textbox default="1"/>
-      </f:entry>
+	    <f:textbox default="1"/>
+	  </f:entry>
 
       <f:entry title="${%jenkinsAgentUser}" field="jenkinsAgentUser">
         <f:textbox default=""/>
@@ -126,22 +130,22 @@
       </f:entry>
 
       <f:entry title="${%initScript}" field="initScript">
-        <f:textarea />
-      </f:entry>
+	    <f:textarea />
+	  </f:entry>
 
       <f:entry title="${%exportJenkinsEnvVars}" field="exportJenkinsEnvVars">
-        <f:checkbox default='false' />
-      </f:entry>
+	    <f:checkbox default='false' />
+	  </f:entry>
 
       <f:entry title="${%initScriptTimeoutSeconds}" field="initScriptTimeoutSeconds">
-        <f:textbox default="120" />
+	    <f:textbox default="120" />
       </f:entry>
 
       <f:entry title="${%instanceCap}" field="instanceCap">
-        <f:textbox />
-      </f:entry>
+	    <f:textbox />
+	  </f:entry>
 
-      <f:entry title="${%autoImageUpdate}" field="autoImageUpdate">
+	  <f:entry title="${%autoImageUpdate}" field="autoImageUpdate">
         <f:checkbox default='false' />
       </f:entry>
 
@@ -162,7 +166,11 @@
       </f:entry>
 
       <f:entry title="${%retryTimeoutMinutes}" field="retryTimeoutMins">
-        <f:textbox default="10" />
+	    <f:textbox default="10" />
+      </f:entry>
+
+      <f:entry title="${%disableLegacyImdsEndpoint}" field="disableLegacyImdsEndpoint">
+        <f:checkbox default='false'/>
       </f:entry>
 
     </f:advanced>
